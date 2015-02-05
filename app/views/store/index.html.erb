@@ -1,0 +1,38 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h3 class="list-group-item-heading">Your Nature Catalog</h3>
+    <p class="list-group-item-text">Nature products</p>
+  </a>
+</div>
+
+<div class="row">
+
+	<% @products.each do |product| %>
+
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<%= image_tag(product.image_url) %>
+				<div class="caption">
+				<h3><%= product.title %></h3>
+
+				<%= sanitize(product.description) %>
+				<br/><br/>
+				<div class="price_line">
+					<span class="price"><%= number_to_currency(product.price) %></span>
+
+				</div>
+
+				<p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> <a href="#" class="btn btn-default" role="button">View</a></p>
+				</div>
+			</div>
+		  
+		</div>
+	  
+
+	<% end %>
+
+</div>

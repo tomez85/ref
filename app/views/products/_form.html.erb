@@ -1,0 +1,39 @@
+
+<%= simple_form_for(@product, html: { class: 'form-vertical' }) do |f| %>
+	<% if @product.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+		  <ul>
+		  <% @product.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		  <% end %>
+		  </ul>
+		</div>
+	<% end %>
+
+	
+	<div class="field">
+		<%= f.input :title, placeholder: 'Enter title' %>
+	 </div>
+		
+	<div class="field">
+		<%= f.label :description %><br>
+		<%= f.text_area :description, :rows=> 6, :class => "form-control" %>
+	</div>
+	
+	<div class="field">		
+		<%= f.input :image_url, placeholder: 'Image url' %>
+	</div>
+	
+	<div class="field">
+		<%= f.input :price, placeholder: 'Price (for example $10)' %>
+	</div>
+	
+	<div class="actions">
+		<%= f.button :submit %>
+	</div>
+	  
+<% end %>
+	
+
