@@ -9,6 +9,10 @@ gem 'rails', '4.1.0'
 
 gem 'pg'
 
+#asset pipeline By default Rails 4 will not serve your assets. To enable this functionality 
+gem 'rails_12factor', group: :production
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

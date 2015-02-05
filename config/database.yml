@@ -3,7 +3,10 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-#
+#DATABASE_URL
+#postgres://lyoiojtvajgsqy:OmwpTNzKJV5FogQp_oDWZZtI-w@ec2-23-21-235-249.compute-1.amazonaws.com:5432/d6kogfboiaop2k
+#HEROKU_POSTGRESQL_ORANGE_URL
+#postgres://lyoiojtvajgsqy:OmwpTNzKJV5FogQp_oDWZZtI-w@ec2-23-21-235-249.compute-1.amazonaws.com:5432/d6kogfboiaop2k
 default: &default
   adapter: postgresql
   database: d6kogfboiaop2k
